@@ -367,8 +367,9 @@ function! s:HighlightLongLines(width)
     endif
 endfunction
 
-set transparency=5
-
+if has("gui_running")
+  set transparency=5
+end
 
 "key mapping for window navigation
 map <C-h> <C-w>h
