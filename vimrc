@@ -34,7 +34,7 @@ nmap <D-6> g^
 nmap <D-0> g^
 
 "add some line space for easy reading
-set linespace=4
+set linespace=1
 
 "disable visual bell
 set visualbell t_vb=
@@ -263,7 +263,7 @@ if has("gui_running")
         set columns=115
     endif
     if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h14
+        set guifont=Monaco:h12
         " key binding for Command-T to behave properly
         " uncomment to replace the Mac Command-T key to Command-T plugin
         "macmenu &File.New\ Tab key=<nop>
@@ -277,7 +277,7 @@ if has("gui_running")
     endif
 else
     "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
+    let g:CSApprox_loaded=1
 endif
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
@@ -368,7 +368,7 @@ function! s:HighlightLongLines(width)
 endfunction
 
 if has("gui_running")
-  set transparency=5
+  set transparency=3
 end
 
 "key mapping for window navigation
