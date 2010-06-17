@@ -17,7 +17,7 @@ set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
 set number      "add line numbers
-set showbreak=...
+set showbreak=…
 set wrap linebreak nolist
 
 "mapping for command key to map navigation thru display lines instead
