@@ -260,7 +260,7 @@ if has("gui_running")
         colorscheme railscasts
         set guitablabel=%M%t
         set lines=40
-        set columns=115
+        set columns=165
     endif
     if has("gui_mac") || has("gui_macvim")
         set guifont=Monaco:h12
@@ -287,10 +287,10 @@ nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
 "map to bufexplorer
-nnoremap <leader>b :BufExplorer<cr>
+nnoremap <leader>[ :BufExplorer<cr>
 
 "map to CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
+nnoremap <leader>] :CommandT<CR>
 
 "map Q to something useful
 noremap Q gq
