@@ -369,6 +369,7 @@ endfunction
 
 if has("gui_running")
   set transparency=3
+  set cursorcolumn
 end
 
 "key mapping for window navigation
