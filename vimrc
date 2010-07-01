@@ -298,6 +298,8 @@ noremap Q gq
 "make Y consistent with C and D
 nnoremap Y y$
 
+cabbrev W w
+
 "bindings for ragtag
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
