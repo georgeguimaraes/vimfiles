@@ -374,6 +374,8 @@ if has("gui_running")
   set cursorcolumn
 end
 
+set cursorline
+
 "key mapping for window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
