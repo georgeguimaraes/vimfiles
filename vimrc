@@ -292,6 +292,9 @@ nnoremap <leader>[ :BufExplorer<cr>
 "map to CommandT TextMate style finder
 nnoremap <leader>] :CommandT<CR>
 
+"switch to last used buffer. fucking useful!
+nnoremap <leader>; :e#<CR>
+
 "map Q to something useful
 noremap Q gq
 
