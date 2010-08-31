@@ -20,7 +20,7 @@ set wrap linebreak
 
 "display tabs and trailing spaces
 set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+set listchars=tab:▻⋅,trail:⋅,nbsp:⋅
 
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
