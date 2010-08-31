@@ -305,6 +305,10 @@ nnoremap Y y$
 
 cabbrev W w
 
+" Inserts the path of the currently edited file into a command
+" Command mode: Ctrl+P
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
 "bindings for ragtag
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
