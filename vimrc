@@ -14,7 +14,7 @@ set showmode    "show current mode down the bottom
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
-set number      "add line numbers
+set relativenumber      "add line relative numbers, new in vim 7.3
 set showbreak=…
 set wrap linebreak
 
@@ -277,10 +277,11 @@ else
     let g:CSApprox_loaded=1
 endif
 
+let NERDTreeQuitOnOpen=0
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
 "make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
+nnoremap <leader>l :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
 "map to bufexplorer
@@ -292,6 +293,23 @@ nnoremap <leader>] :CommandT<CR>
 "switch to last used buffer. fucking useful!
 nnoremap <leader>; :e#<CR>
 
+" strip all trailing whitespaces
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Ack shortcut
+nnoremap <leader>a :Ack<space>
+
+" splits made easy
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>s <C-w>s<C-w>j
+
+" declutter all windows
+nnoremap <leader>o <C-w>o
+
+" shortcuts to open and reload .vimrc
+nnoremap <leader>ev <C-w><C-v><C-l>:edit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 "map Q to something useful
 noremap Q gq
 
@@ -299,6 +317,15 @@ noremap Q gq
 nnoremap Y y$
 
 cabbrev W w
+cabbrev Wq wq
+cabbrev Q q
+
+nmap <leader>q  :q <CR>
+nmap <leader>q1 :q!<CR>
+nmap <leader>w  :w <CR>
+
+" K = inverted J: join line up
+map K ddpkJ
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
@@ -379,3 +406,4 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
