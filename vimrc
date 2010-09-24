@@ -22,6 +22,103 @@ set wrap linebreak
 set list
 set listchars=tab:▻⋅,trail:⋅,nbsp:⋅
 
+set linespace=1      "add some line space for easy reading
+set visualbell t_vb= "disable visual bell
+set cursorline       "highlight current line
+
+"try to make possible to navigate within lines of wrapped lines
+nmap <Down> gj
+nmap <Up> gk
+set fo=l
+
+nmap <silent> <Leader>p :NERDTreeToggle<CR>
+
+"make <c-l> clear the highlight as well as redraw
+nnoremap <leader>l :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
+
+"map to bufexplorer
+nnoremap <leader>[ :BufExplorer<cr>
+
+"map to CommandT TextMate style finder
+nnoremap <leader>] :CommandT<CR>
+
+"switch to last used buffer. fucking useful!
+nnoremap <leader>; :e#<CR>
+
+" strip all trailing whitespaces
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Ack shortcut
+nnoremap <leader>a :Ack<space>
+
+" splits made easy
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>s <C-w>s<C-w>j
+
+" declutter all windows
+nnoremap <leader>o <C-w>o
+
+" shortcuts to open and reload .vimrc
+nnoremap <leader>ev <C-w><C-v><C-l>:edit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"map Q to something useful
+noremap Q gq
+
+"make Y consistent with C and D
+nnoremap Y y$
+
+cabbrev W w
+cabbrev Wq wq
+cabbrev Q q
+
+nmap <leader>q  :q <CR>
+nmap <leader>q1 :q!<CR>
+nmap <leader>w  :w <CR>
+
+" K = inverted J: join line up
+map K ddpkJ
+
+" Inserts the path of the currently edited file into a command
+" Command mode: Ctrl+P
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
+"turn off needless toolbar on gvim/mvim
+set guioptions-=T
+
+"indent settings
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+set wildmode=list:longest   "make cmdline tab completion similar to bash
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+
+set formatoptions-=o "dont continue comments when pushing o/O
+
+"vertical/horizontal scroll off settings
+set scrolloff=3
+set sidescrolloff=7
+set sidescroll=1
+
+"turn on syntax highlighting
+syntax on
+
+"some stuff to get the mouse going in term
+set mouse=a
+set ttymouse=xterm2
+
+"hide buffers when not displayed
+set hidden
+
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
 vmap <D-j> gj
@@ -35,16 +132,11 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 
-"add some line space for easy reading
-set linespace=1
-
-"disable visual bell
-set visualbell t_vb=
-
-"try to make possible to navigate within lines of wrapped lines
-nmap <Down> gj
-nmap <Up> gk
-set fo=l
+"key mapping for window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 "statusline setup
 set statusline=%f       "tail of the filename
@@ -88,9 +180,6 @@ set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 set laststatus=2
-
-"turn off needless toolbar on gvim/mvim
-set guioptions-=T
 
 "recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
@@ -172,8 +261,7 @@ function! s:LongLines()
     let threshold = (&tw ? &tw : 80)
     let spaces = repeat(" ", &ts)
 
-    let long_line_lens = []
-
+let long_line_lens = []
     let i = 1
     while i <= line("$")
         let len = strlen(substitute(getline(i), '\t', spaces, 'g'))
@@ -199,28 +287,6 @@ function! s:Median(nums)
     endif
 endfunction
 
-"indent settings
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set autoindent
-
-"folding settings
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
-set wildmode=list:longest   "make cmdline tab completion similar to bash
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-
-set formatoptions-=o "dont continue comments when pushing o/O
-
-"vertical/horizontal scroll off settings
-set scrolloff=3
-set sidescrolloff=7
-set sidescroll=1
-
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype off
 
@@ -230,16 +296,6 @@ call pathogen#runtime_append_all_bundles()
 "load ftplugins and indent files
 filetype plugin on
 filetype indent on
-
-"turn on syntax highlighting
-syntax on
-
-"some stuff to get the mouse going in term
-set mouse=a
-set ttymouse=xterm2
-
-"hide buffers when not displayed
-set hidden
 
 "Command-T configuration
 let g:CommandTMaxHeight=10
@@ -276,60 +332,6 @@ else
     "dont load csapprox if there is no gui support - silences an annoying warning
     let g:CSApprox_loaded=1
 endif
-
-let NERDTreeQuitOnOpen=0
-nmap <silent> <Leader>p :NERDTreeToggle<CR>
-
-"make <c-l> clear the highlight as well as redraw
-nnoremap <leader>l :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
-
-"map to bufexplorer
-nnoremap <leader>[ :BufExplorer<cr>
-
-"map to CommandT TextMate style finder
-nnoremap <leader>] :CommandT<CR>
-
-"switch to last used buffer. fucking useful!
-nnoremap <leader>; :e#<CR>
-
-" strip all trailing whitespaces
-nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
-
-" Ack shortcut
-nnoremap <leader>a :Ack<space>
-
-" splits made easy
-nnoremap <leader>v <C-w>v<C-w>l
-nnoremap <leader>s <C-w>s<C-w>j
-
-" declutter all windows
-nnoremap <leader>o <C-w>o
-
-" shortcuts to open and reload .vimrc
-nnoremap <leader>ev <C-w><C-v><C-l>:edit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-"map Q to something useful
-noremap Q gq
-
-"make Y consistent with C and D
-nnoremap Y y$
-
-cabbrev W w
-cabbrev Wq wq
-cabbrev Q q
-
-nmap <leader>q  :q <CR>
-nmap <leader>q1 :q!<CR>
-nmap <leader>w  :w <CR>
-
-" K = inverted J: join line up
-map K ddpkJ
-
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 "bindings for ragtag
 inoremap <M-o>       <Esc>o
@@ -398,12 +400,3 @@ if has("gui_running")
   set transparency=3
   set cursorcolumn
 end
-
-set cursorline
-
-"key mapping for window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
