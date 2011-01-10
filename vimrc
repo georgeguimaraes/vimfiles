@@ -30,6 +30,37 @@ set listchars=tab:▻⋅,trail:⋅,nbsp:⋅
 set linespace=1      "add some line space for easy reading
 set visualbell t_vb= "disable visual bell
 set cursorline       "highlight current line
+set gdefault         " global search/replace by default
+set hidden           "hide buffers when not displayed
+
+"indent settings
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+set wildmode=list:longest   "make cmdline tab completion similar to bash
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+
+set formatoptions-=o    "dont continue comments when pushing o/O
+set virtualedit=block   " allow moving past end of line in block selection mode
+
+"vertical/horizontal scroll off settings
+set scrolloff=3
+set sidescrolloff=7
+set sidescroll=1
+
+set splitbelow          " sb: split new window below current window
+set splitright          " spr: split new window to the right
+set noequalalways       " ea: resize all windows to same size to fit a new one
+
+syntax on "turn on syntax highlighting
 
 "try to make possible to navigate within lines of wrapped lines
 nmap <Down> gj
@@ -98,37 +129,9 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 "turn off needless toolbar on gvim/mvim
 set guioptions-=T
 
-"indent settings
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set autoindent
-
-"folding settings
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
-set wildmode=list:longest   "make cmdline tab completion similar to bash
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-
-set formatoptions-=o "dont continue comments when pushing o/O
-
-"vertical/horizontal scroll off settings
-set scrolloff=3
-set sidescrolloff=7
-set sidescroll=1
-
-"turn on syntax highlighting
-syntax on
-
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
-
-"hide buffers when not displayed
-set hidden
 
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
