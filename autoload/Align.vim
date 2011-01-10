@@ -14,11 +14,6 @@
 "               holder be liable for any damages resulting from the use
 "               of this software.
 "
-" Romans 1:16,17a : For I am not ashamed of the gospel of Christ, for it is {{{1
-" the power of God for salvation for everyone who believes; for the Jew first,
-" and also for the Greek.  For in it is revealed God's righteousness from
-" faith to faith.
-
 " ---------------------------------------------------------------------
 " Load Once: {{{1
 if exists("g:loaded_Align") || &cp
