@@ -16,7 +16,12 @@ set hlsearch    "hilight searches by default
 
 set relativenumber      "add line relative numbers, new in vim 7.3
 set showbreak=…
-set wrap linebreak
+set nowrap linebreak
+
+set linebreak                   " when wrapping, uses chars listed in breakt
+set breakat=\ ^I!@*-+;:,./?     " when wrapping, break at these characters
+
+set timeoutlen=5000  "timeout for commands
 
 "display tabs and trailing spaces
 set list
@@ -61,7 +66,13 @@ nnoremap <leader>o <C-w>o
 
 " shortcuts to open and reload .vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:edit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>rv :source $MYVIMRC<cr>
+
+" Align ruby hashes => in visual mode
+vmap th :Align =><CR>
+
+" Fold HTML tags
+nnoremap <leader>ft Vatzf
 
 "map Q to something useful
 noremap Q gq
