@@ -47,7 +47,7 @@ nnoremap <leader>] :CommandT<CR>
 nnoremap <leader>; :e#<CR>
 
 " strip all trailing whitespaces
-nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>- :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Ack shortcut
 nnoremap <leader>a :Ack<space>
