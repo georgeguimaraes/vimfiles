@@ -55,3 +55,9 @@
 [submodule "bundle/speeddating"]
 	path = bundle/speeddating
 	url = https://github.com/tpope/vim-speeddating.git
+[submodule "bundle/textobj-user"]
+	path = bundle/textobj-user
+	url = https://github.com/kana/vim-textobj-user.git
+[submodule "bundle/textobj-rubyblock"]
+	path = bundle/textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
