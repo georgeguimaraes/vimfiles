@@ -61,3 +61,6 @@
 [submodule "bundle/textobj-rubyblock"]
 	path = bundle/textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "bundle/css_color"]
+	path = bundle/css_color
+	url = https://github.com/vim-scripts/css_color.vim.git
