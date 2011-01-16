@@ -116,7 +116,6 @@ cabbrev Wq wq
 cabbrev Q q
 
 nmap <leader>q  :q <CR>
-nmap <leader>q1 :q!<CR>
 nmap <leader>w  :w <CR>
 
 " K = inverted J: join line up
@@ -165,7 +164,6 @@ set statusline+=%#warningmsg#
 set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
 set statusline+=%*
 
-set statusline+=%h      "help file flag
 set statusline+=%y      "filetype
 set statusline+=%r      "read only flag
 set statusline+=%m      "modified flag
@@ -175,7 +173,9 @@ set statusline+=%#error#
 set statusline+=%{StatuslineTabWarning()}
 set statusline+=%*
 
+set statusline+=%#error#
 set statusline+=%{StatuslineTrailingSpaceWarning()}
+set statusline+=%*
 
 set statusline+=%{StatuslineLongLineWarning()}
 
