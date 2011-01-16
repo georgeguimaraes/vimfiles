@@ -69,4 +69,4 @@
 	url = https://github.com/mattn/zencoding-vim.git
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
-	url = https://github.com/vim-scripts/AutoClose.git
+	url = https://github.com/georgeguimaraes/AutoClose.git
