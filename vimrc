@@ -99,8 +99,12 @@ nnoremap <leader>o <C-w>o
 nnoremap <leader>ev <C-w><C-v><C-l>:edit $MYVIMRC<cr>
 nnoremap <leader>rv :source $MYVIMRC<cr>
 
-" Align ruby hashes => in visual mode
-vmap th :Align =><CR>
+if exists(":Tabularize")
+  nmap <Leader>t= :Tabularize /=<CR>
+  vmap <Leader>t= :Tabularize /=<CR>
+  nmap <Leader>t: :Tabularize /:\zs<CR>
+  vmap <Leader>t: :Tabularize /:\zs<CR>
+endif
 
 " Fold HTML tags
 nnoremap <leader>ft Vatzf
