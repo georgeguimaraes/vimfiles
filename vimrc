@@ -99,12 +99,15 @@ nnoremap <leader>o <C-w>o
 nnoremap <leader>ev <C-w><C-v><C-l>:edit $MYVIMRC<cr>
 nnoremap <leader>rv :source $MYVIMRC<cr>
 
-if exists(":Tabularize")
-  nmap <Leader>t= :Tabularize /=<CR>
-  vmap <Leader>t= :Tabularize /=<CR>
-  nmap <Leader>t: :Tabularize /:\zs<CR>
-  vmap <Leader>t: :Tabularize /:\zs<CR>
-endif
+" Tabularize shortcuts
+nmap <Leader>th :Tabularize /=><CR>
+vmap <Leader>th :Tabularize /=><CR>
+nmap <Leader>t= :Tabularize /=<CR>
+vmap <Leader>t= :Tabularize /=<CR>
+nmap <Leader>t: :Tabularize /:\zs<CR>
+vmap <Leader>t: :Tabularize /:\zs<CR>
+nmap <Leader>t, :Tabularize /,\zs<CR>
+vmap <Leader>t, :Tabularize /,\zs<CR>
 
 " Fold HTML tags
 nnoremap <leader>ft Vatzf
