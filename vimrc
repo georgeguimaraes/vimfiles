@@ -139,6 +139,10 @@ set guioptions-=T
 set mouse=a
 set ttymouse=xterm2
 
+"easy indent
+vmap > >gv
+vmap < <gv
+
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
 vmap <D-j> gj
@@ -321,6 +325,8 @@ filetype indent on
 "Command-T configuration
 let g:CommandTMaxHeight=10
 let g:CommandTMatchWindowAtTop=1
+
+let g:bufExplorerShowRelativePath=1
 
 if has("gui_running")
     "tell the term has 256 colors
