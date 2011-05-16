@@ -109,6 +109,15 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 nmap <Leader>t, :Tabularize /,\zs<CR>
 vmap <Leader>t, :Tabularize /,\zs<CR>
 
+" Delete fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" Sets .. to go up in tree views inside fugitive
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+
 " Fold HTML tags
 nnoremap <leader>ft Vatzf
 
