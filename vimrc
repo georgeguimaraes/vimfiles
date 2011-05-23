@@ -62,6 +62,12 @@ set noequalalways       " ea: resize all windows to same size to fit a new one
 
 syntax on "turn on syntax highlighting
 
+set nobackup                    " don't make backup files
+set noswapfile                  " do not use swap files (brave mode on!)
+set directory=/tmp              " where to put swap files in
+set backupdir=/tmp              " where to put backup files
+
+
 "try to make possible to navigate within lines of wrapped lines
 nmap <Down> gj
 nmap <Up> gk
