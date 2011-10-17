@@ -115,6 +115,11 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 nmap <Leader>t, :Tabularize /,\zs<CR>
 vmap <Leader>t, :Tabularize /,\zs<CR>
 
+" DelimitMate options
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+let delimitMate_balance_matchpairs = 1
+
 " Delete fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
 

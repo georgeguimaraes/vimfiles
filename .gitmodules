@@ -61,9 +61,6 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = https://github.com/mattn/zencoding-vim.git
-[submodule "bundle/autoclose"]
-	path = bundle/autoclose
-	url = https://github.com/georgeguimaraes/AutoClose.git
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -79,3 +76,6 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
