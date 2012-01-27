@@ -115,6 +115,9 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 nmap <Leader>t, :Tabularize /,\zs<CR>
 vmap <Leader>t, :Tabularize /,\zs<CR>
 
+" Syntastic's :Error shortcut
+nnoremap <leader>\ee :Errors<CR>
+
 " DelimitMate options
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
