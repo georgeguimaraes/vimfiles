@@ -403,7 +403,11 @@ function! s:SetupSnippets()
     "if we're in a rails env then read in the rails snippets
     if filereadable("./config/environment.rb")
         call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-        call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
+    endif
+
+    " if in Rails or a Rack-like app, use rails snippets in .erb files
+    if filereadable("./config/environment.rb") || filereadable("./config.ru")
+      call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
     endif
 
     call ExtractSnips("~/.vim/snippets/html", "eruby")
