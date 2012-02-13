@@ -94,3 +94,6 @@
 [submodule "bundle/argtextobj"]
 	path = bundle/argtextobj
 	url = https://github.com/vim-scripts/argtextobj.vim.git
+[submodule "bundle/puppet-syntax"]
+	path = bundle/puppet-syntax
+	url = https://github.com/puppetlabs/puppet-syntax-vim.git
