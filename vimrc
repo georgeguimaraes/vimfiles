@@ -114,6 +114,9 @@ nmap <Leader>t: :Tabularize /:\zs<CR>
 vmap <Leader>t: :Tabularize /:\zs<CR>
 nmap <Leader>t, :Tabularize /,\zs<CR>
 vmap <Leader>t, :Tabularize /,\zs<CR>
+nmap <Leader>tsp :Tabularize /\s\zs<CR>
+vmap <Leader>tsp :Tabularize /\s\zs<CR>
+
 
 " Syntastic's :Error shortcut
 nnoremap <leader>ee :Errors<CR><C-w>j
