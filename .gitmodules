@@ -97,3 +97,6 @@
 [submodule "bundle/puppet-syntax"]
 	path = bundle/puppet-syntax
 	url = https://github.com/puppetlabs/puppet-syntax-vim.git
+[submodule "bundle/html5-vim-minimal"]
+	path = bundle/html5-vim-minimal
+	url = https://github.com/cfcosta/html5-vim-minimal.git
