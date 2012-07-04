@@ -100,3 +100,6 @@
 [submodule "bundle/html5-vim-minimal"]
 	path = bundle/html5-vim-minimal
 	url = https://github.com/cfcosta/html5-vim-minimal.git
+[submodule "bundle/railscasts-theme"]
+	path = bundle/railscasts-theme
+	url = git@github.com:georgeguimaraes/vim-railscasts-theme.git
