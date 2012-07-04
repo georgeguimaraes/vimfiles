@@ -394,6 +394,9 @@ let g:ragtag_global_maps = 1
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 
+"don't check syntax when opening files
+let g:syntastic_check_on_open=0
+
 "visual search mappings
 function! s:VSetSearch()
   let temp = @@
