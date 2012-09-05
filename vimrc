@@ -120,6 +120,11 @@ vmap <Leader>tsp :Tabularize /\s\zs<CR>
 " Syntastic's :Error shortcut
 nnoremap <leader>ee :Errors<CR><C-w>j
 
+" ZenCoding identation
+let g:user_zen_settings = {
+\  'indentation' : '  '
+\}
+
 " DelimitMate options
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
