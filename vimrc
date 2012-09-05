@@ -204,6 +204,12 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+"OMG, no arrow keys
+map <Left>  <Nop>
+map <Right> <Nop>
+map <Up>    <Nop>
+map <Down>  <Nop>
+
 "statusline setup
 set statusline=%f       "tail of the filename
 
