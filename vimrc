@@ -81,9 +81,6 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <leader>[ :BufExplorer<cr>
 
-"map to CommandT TextMate style finder
-nnoremap <leader>] :CommandT<CR>
-
 "switch to last used buffer. fucking useful!
 nnoremap <leader>; :e#<CR>
 
@@ -370,10 +367,6 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin on
 filetype indent on
 
-"Command-T configuration
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
-
 let g:bufExplorerShowRelativePath=1
 
 if has("gui_running")
@@ -392,10 +385,6 @@ if has("gui_running")
   endif
   if has("gui_mac") || has("gui_macvim")
     set guifont=Monaco:h12
-    " key binding for Command-T to behave properly
-    " uncomment to replace the Mac Command-T key to Command-T plugin
-    "macmenu &File.New\ Tab key=<nop>
-    "map <D-t> :CommandT<CR>
     " make Mac's Option key behave as the Meta key
     set invmmta
   endif
