@@ -1,6 +1,8 @@
 call plug#begin()
   Plug 'jpo/vim-railscasts-theme'
   Plug 'scrooloose/nerdtree'
+  Plug 'bling/vim-airline'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme railscasts
