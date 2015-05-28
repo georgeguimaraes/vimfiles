@@ -3,6 +3,18 @@ call plug#begin()
   Plug 'scrooloose/nerdtree'
   Plug 'bling/vim-airline'
   Plug 'tpope/vim-fugitive'
+  Plug 'Raimondi/delimitMate'
+
+  " syntax checkers
+  Plug 'scrooloose/syntastic'
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'vim-ruby/vim-ruby'
+
+  " snipmate
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'tomtom/tlib_vim'
+  Plug 'garbas/vim-snipmate'
+  Plug 'honza/vim-snippets'
 call plug#end()
 
 colorscheme railscasts
