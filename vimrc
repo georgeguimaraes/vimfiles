@@ -125,3 +125,6 @@ nnoremap gV `[v`]
 
 " declutter all windows
 nnoremap <leader>o <C-w>o
+
+" strip all trailing whitespaces
+nnoremap <leader>- :%s/\s\+$//<cr>:let @/=''<CR>
