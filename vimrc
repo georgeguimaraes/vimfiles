@@ -34,7 +34,8 @@ set cursorline
 set lazyredraw                  " redraw only when we need to
 set showmatch                   " highlight matching [{()}]
 set showcmd
-set showmode
+set noshowmode
+set laststatus=2
 set showbreak=…
 set nowrap
 set linebreak                   " when wrapping, uses chars listed in breakt
