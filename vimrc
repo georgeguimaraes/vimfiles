@@ -4,11 +4,18 @@ call plug#begin()
   Plug 'bling/vim-airline'
   Plug 'tpope/vim-fugitive'
   Plug 'Raimondi/delimitMate'
+  Plug 'tomtom/tcomment_vim'
+  Plug 'kien/ctrlp.vim'
+  Plug 'gabesoft/vim-ags'
 
-  " syntax checkers
+  " syntax checkers and styling
   Plug 'scrooloose/syntastic'
   Plug 'elixir-lang/vim-elixir'
   Plug 'vim-ruby/vim-ruby'
+  Plug 'tpope/vim-rails'
+  Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+  Plug 'hail2u/vim-css3-syntax'
+  Plug 'othree/html5.vim'
 
   " snipmate
   Plug 'MarcWeber/vim-addon-mw-utils'
