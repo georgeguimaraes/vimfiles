@@ -39,6 +39,7 @@ set linebreak                   " when wrapping, uses chars listed in breakt
 set breakat=\ ^I!@*-+;:,./?     " when wrapping, break at these characters
 set list
 set listchars=tab:▻⋅,trail:⋅,nbsp:⋅
+set visualbell t_vb=            "disable visual bell
 set cursorline
 set virtualedit=block           " allow moving past end of line in block selection mode
 filetype indent on              " load filetype-specific indent files
@@ -76,7 +77,7 @@ set foldenable                  " fold by default
 " space open/closes fold
 nnoremap <space> za
 
-" move vertically by visual line
+" move vertically by visual lin
 nnoremap j gj
 nnoremap k gk
 
@@ -108,6 +109,10 @@ map K ddpkJ
 "easy indent
 vmap > >gv
 vmap < <gv
+
+" splits made easy
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>s <C-w>s<C-w>j
 
 "OMG, no arrow keys
 map <Left>  <Nop>
