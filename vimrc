@@ -46,7 +46,7 @@ filetype indent on              " load filetype-specific indent files
 
 " visual autocomplete for command menu
 set wildmenu
-set wildmode=list:longest
+set wildmode=full
 set wildignore+=*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov,*.zip,*.gz,*.bz,*.tar
 
 set mouse=a ttymouse=xterm2
