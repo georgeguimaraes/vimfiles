@@ -7,6 +7,8 @@ call plug#begin()
   Plug 'tomtom/tcomment_vim'
   Plug 'kien/ctrlp.vim'
   Plug 'gabesoft/vim-ags'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
 
   " syntax checkers and styling
   Plug 'scrooloose/syntastic'
@@ -16,8 +18,9 @@ call plug#begin()
   Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
   Plug 'hail2u/vim-css3-syntax'
   Plug 'othree/html5.vim'
+  Plug 'rodjek/vim-puppet'
 
-  " snipmate
+  " snippets
   Plug 'MarcWeber/vim-addon-mw-utils'
   Plug 'tomtom/tlib_vim'
   Plug 'garbas/vim-snipmate'
@@ -48,7 +51,7 @@ set autoindent
 set nobackup                    " don't make backup files
 set noswapfile                  " do not use swap files (brave mode on!)
 
-set relativenumber
+set relativenumber number
 set cursorline
 set lazyredraw                  " redraw only when we need to
 set showmatch                   " highlight matching [{()}]
@@ -150,3 +153,5 @@ nnoremap <leader>o <C-w>o
 
 " strip all trailing whitespaces
 nnoremap <leader>- :%s/\s\+$//<cr>:let @/=''<CR>
+
+

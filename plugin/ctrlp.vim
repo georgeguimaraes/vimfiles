@@ -1,1 +1,1 @@
-nnoremap <leader>[ :CtrlP <CR>
+let g:ctrlp_map = '<enter>'
