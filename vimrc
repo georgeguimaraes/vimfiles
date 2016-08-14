@@ -1,7 +1,9 @@
 call plug#begin()
   Plug 'jpo/vim-railscasts-theme'
   Plug 'scrooloose/nerdtree'
-  Plug 'bling/vim-airline'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'tpope/vim-fugitive'
   Plug 'Raimondi/delimitMate'
   Plug 'tomtom/tcomment_vim'
@@ -18,20 +20,15 @@ call plug#begin()
   Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
   Plug 'hail2u/vim-css3-syntax'
   Plug 'othree/html5.vim'
-  Plug 'rodjek/vim-puppet'
-
-  " snippets
-  Plug 'MarcWeber/vim-addon-mw-utils'
-  Plug 'tomtom/tlib_vim'
-  Plug 'garbas/vim-snipmate'
-  Plug 'honza/vim-snippets'
 call plug#end()
 
 colorscheme railscasts
 syntax enable " enable syntax processing
-set guifont=Monaco:h15
+set guifont=Monaco\ for\ Powerline:h16
 set guitablabel=%M%t
-set invmmta                     " make Mac's Option key behave as the Meta key
+if has("gui_macvim")
+  set invmmta                     " make Mac's Option key behave as the Meta key
+endif
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -153,5 +150,3 @@ nnoremap <leader>o <C-w>o
 
 " strip all trailing whitespaces
 nnoremap <leader>- :%s/\s\+$//<cr>:let @/=''<CR>
-
-
