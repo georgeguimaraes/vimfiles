@@ -20,6 +20,9 @@ call plug#begin()
   Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
   Plug 'hail2u/vim-css3-syntax'
   Plug 'othree/html5.vim'
+
+  " autocompleter and snippets
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
 colorscheme railscasts
