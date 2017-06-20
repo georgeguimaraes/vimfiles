@@ -22,12 +22,12 @@ call plug#begin()
   Plug 'othree/html5.vim'
 
   " autocompleter and snippets
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  " Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
 colorscheme railscasts
 syntax enable " enable syntax processing
-set guifont=Monaco\ for\ Powerline:h16
+set guifont=Monaco\ for\ Powerline:h14
 set guitablabel=%M%t
 if has("gui_macvim")
   set invmmta                     " make Mac's Option key behave as the Meta key
