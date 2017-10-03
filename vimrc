@@ -27,7 +27,7 @@ call plug#end()
 
 colorscheme railscasts
 syntax enable " enable syntax processing
-set guifont=Monaco\ for\ Powerline:h14
+set guifont=Monaco\ for\ Powerline:h18
 set guitablabel=%M%t
 if has("gui_macvim")
   set invmmta                     " make Mac's Option key behave as the Meta key
@@ -153,3 +153,7 @@ nnoremap <leader>o <C-w>o
 
 " strip all trailing whitespaces
 nnoremap <leader>- :%s/\s\+$//<cr>:let @/=''<CR>
+
+"Macbook Pro touch bar has no physical ESC
+noremap <S-Tab> <Tab>
+noremap <Tab> <Esc>
