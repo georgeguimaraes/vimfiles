@@ -155,5 +155,5 @@ nnoremap <leader>o <C-w>o
 nnoremap <leader>- :%s/\s\+$//<cr>:let @/=''<CR>
 
 "Macbook Pro touch bar has no physical ESC
-noremap <S-Tab> <Tab>
-noremap <Tab> <Esc>
+" inoremav <S-Tab> <Tab>
+" vnoremap <Tab> <Esc>
