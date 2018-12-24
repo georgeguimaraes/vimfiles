@@ -15,7 +15,8 @@ call plug#begin()
 
   " syntax checkers and styling
   Plug 'scrooloose/syntastic'
-  Plug 'elixir-lang/vim-elixir'
+  Plug 'elixir-editors/vim-elixir'
+  Plug 'mhinz/vim-mix-format'
   Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'
   Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
