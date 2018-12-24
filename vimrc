@@ -1,30 +1,30 @@
 call plug#begin()
-  Plug 'jpo/vim-railscasts-theme'
-  Plug 'scrooloose/nerdtree'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'tpope/vim-fugitive'
-  Plug 'Raimondi/delimitMate'
-  Plug 'tomtom/tcomment_vim'
-  Plug 'gabesoft/vim-ags'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-repeat'
-  Plug '/usr/local/opt/fzf'
-  Plug 'junegunn/fzf.vim'
+Plug 'jpo/vim-railscasts-theme'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'Raimondi/delimitMate'
+Plug 'tomtom/tcomment_vim'
+Plug 'gabesoft/vim-ags'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
-  " syntax checkers and styling
-  Plug 'scrooloose/syntastic'
-  Plug 'elixir-editors/vim-elixir'
-  Plug 'mhinz/vim-mix-format'
-  Plug 'vim-ruby/vim-ruby'
-  Plug 'tpope/vim-rails'
-  Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
-  Plug 'hail2u/vim-css3-syntax'
-  Plug 'othree/html5.vim'
+" syntax checkers and styling
+Plug 'scrooloose/syntastic'
+Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'othree/html5.vim'
 
-  " autocompleter and snippets
-  " Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" autocompleter and snippets
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
 colorscheme railscasts
