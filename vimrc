@@ -23,16 +23,27 @@ Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
 
+" colorschemes
+Plug 'sonph/onehalf', { 'rtp': 'vim/' }
+
 " autocompleter and snippets
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
-colorscheme railscasts
+colorscheme onehalfdark
+let g:airline_theme = 'onehalfdark'
+
 syntax enable " enable syntax processing
 set guifont=Monaco\ for\ Powerline:h18
 set guitablabel=%M%t
 if has("gui_macvim")
   set invmmta                     " make Mac's Option key behave as the Meta key
+endif
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
 endif
 
 "allow backspacing over everything in insert mode
