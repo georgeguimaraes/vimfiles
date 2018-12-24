@@ -7,10 +7,11 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'Raimondi/delimitMate'
   Plug 'tomtom/tcomment_vim'
-  Plug 'kien/ctrlp.vim'
   Plug 'gabesoft/vim-ags'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-repeat'
+  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf.vim'
 
   " syntax checkers and styling
   Plug 'scrooloose/syntastic'
@@ -157,3 +158,6 @@ nnoremap <leader>- :%s/\s\+$//<cr>:let @/=''<CR>
 "Macbook Pro touch bar has no physical ESC
 " inoremav <S-Tab> <Tab>
 " vnoremap <Tab> <Esc>
+
+" fzf trigger
+map ; :Files<CR>
