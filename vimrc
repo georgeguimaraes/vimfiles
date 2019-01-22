@@ -172,4 +172,18 @@ nnoremap <leader>- :%s/\s\+$//<cr>:let @/=''<CR>
 " vnoremap <Tab> <Esc>
 
 " fzf trigger
-map ; :Files<CR>
+nnoremap <silent> <expr> ; (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
+
+" Cut, copy, paste
+vmap <C-c> y<Esc>i
+vmap <C-x> d<Esc>i
+map <C-v> pi
+imap <C-v> <Esc>pi
+imap <C-z> <Esc>ui
+
+" Use arrow keys
+map <D-A-RIGHT> <C-w>l
+map <D-A-LEFT> <C-w>h
+map <D-A-DOWN> <C-w><C-w>
+map <D-A-UP> <C-w>W
+
