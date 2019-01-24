@@ -153,10 +153,10 @@ nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>s <C-w>s<C-w>j
 
 "OMG, no arrow keys
-map <Left>  <Nop>
-map <Right> <Nop>
-map <Up>    <Nop>
-map <Down>  <Nop>
+map <Left> <C-w>h
+map <Right> <C-w>l
+map <Up> <C-w><C-w>
+map <Down> <C-w>W
 
 " highlight last inserted text
 nnoremap gV `[v`]
@@ -180,10 +180,3 @@ vmap <C-x> d<Esc>i
 map <C-v> pi
 imap <C-v> <Esc>pi
 imap <C-z> <Esc>ui
-
-" Use arrow keys
-map <D-A-RIGHT> <C-w>l
-map <D-A-LEFT> <C-w>h
-map <D-A-DOWN> <C-w><C-w>
-map <D-A-UP> <C-w>W
-
