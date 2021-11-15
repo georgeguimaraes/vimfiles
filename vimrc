@@ -34,7 +34,7 @@ colorscheme onehalfdark
 let g:airline_theme = 'onehalfdark'
 
 syntax enable " enable syntax processing
-set guifont=Monaco\ for\ Powerline:h18
+set guifont=Hack:h18
 set guitablabel=%M%t
 if has("gui_macvim")
   set invmmta                     " make Mac's Option key behave as the Meta key
